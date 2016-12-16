@@ -1,0 +1,64 @@
+<html>
+<head>
+	<!-- JQuery From Google -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- JQuery UI from Google -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" type = "text/css" href="game.css" />
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<body>
+<div id = "wrapper">
+	<div id = "innerwrap">
+		<div id = "buttons"> 
+			<div class = "uiswitch" onClick = "uiSwitch('mainboard')">G</div>
+			<div class = "uiswitch" onClick = "uiSwitch('inventory')">I</div>
+		</div>
+
+		<div class = "uiholder" style = "display:none" id = "inventory">
+		</div>
+
+		<div class = "uiholder" id = "mainboard">
+		<div id = "grid" style = "80%"></div>
+
+		<div style = "display:inline-block">
+		<table id = "ui" style = "min-height: 64px; width: 100%">
+			<tr>
+				<td><div id = "data">
+					<div id = "time"></div>
+					</div>
+					<div id = "posimg"></div>
+					<div id = "poscontents"></div>
+					<div id = "alert"></div>
+				</td>
+
+				<td>
+					<table id = "movementkeys">
+						<tr>
+							<td/><td><div class = "direction" onclick="moveP(1)">UP</div><td></tr>
+						<tr>
+							<td><div class = "direction" onclick="moveP(2)">LEFT</div><td/><div class = "direction" id = "mainbtn" onclick="collect()">COLLECT</div><td><div class = "direction" onclick="moveP(0)">RIGHT</div></td></tr>
+						<tr>
+							<td/><td><div class = "direction" onclick="moveP(3)">DOWN</div><td>
+					</table>
+				</td></tr>
+		</table>
+		</div>
+		</div>
+
+		<div style = "float:left; position:absolute; bottom: 0; opacity: .75; font-size: 9px;" id = "version" onClick = "location.reload(true)"></div>
+	</div id = "innerwrap">
+</div id="wrapper">
+
+
+
+
+
+
+
+</body>
+
+</html>
